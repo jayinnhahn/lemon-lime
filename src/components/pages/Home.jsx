@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 
 // Hero Image Component
 const HeroImage = ({ image }) => (
-  <figure className="w-full sm:w-[32rem] h-[19.5rem] border-2 border-[#1E1E1E] rounded-lg shadow-md overflow-hidden">
+  <figure className="w-full max-w-[32rem] h-[19.5rem] border-2 border-[#1E1E1E] rounded-lg shadow-md overflow-hidden">
     <img
       src={image}
       alt="Little Lemon Restaurant"
