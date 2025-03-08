@@ -7,8 +7,8 @@ import Footer from './components/ui/Footer';
 function App() {
   return (
     <>
-      <div className="bg-[#F5F5F5] px-40">
-        <Navbar/>
+      <Navbar/>
+      <div className="bg-[#F5F5F5] mt-20 lg:px-40">
         <Home/>
         <Menu/>
       </div>

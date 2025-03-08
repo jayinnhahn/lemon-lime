@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 
 // Hero Image Component
 const HeroImage = ({ image }) => (
-  <figure className="w-full max-w-[32rem] h-[19.5rem] border-2 border-[#1E1E1E] rounded-lg shadow-md overflow-hidden">
+  <figure className="w-full h-[19.5rem] border-2 border-[#1E1E1E] rounded-lg shadow-md overflow-hidden">
     <img
       src={image}
       alt="Little Lemon Restaurant"
@@ -172,7 +172,7 @@ const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <main className="bg-[#F5F5F5] flex flex-col sm:flex-row justify-between items-center p-8 min-h-screen gap-8">
+    <main className="bg-[#F5F5F5] flex flex-col sm:flex-row justify-between items-center p-8 min-h-screen ">
       {/* Text Section */}
       <section className="max-w-lg">
         <header>
