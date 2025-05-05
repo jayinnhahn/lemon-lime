@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-// Hero Image Component
 const HeroImage = ({ image }) => (
   <figure className="w-full h-[19.5rem] border-2 border-[#1E1E1E] rounded-lg shadow-md overflow-hidden">
     <img
@@ -13,7 +12,6 @@ const HeroImage = ({ image }) => (
   </figure>
 );
 
-// Validation Schema
 const ReservationSchema = Yup.object().shape({
   name: Yup.string().required('Name is required'),
   email: Yup.string().email('Invalid email').required('Email is required'),
@@ -24,7 +22,6 @@ const ReservationSchema = Yup.object().shape({
   occasion: Yup.string()
 });
 
-// Modal Component
 const ReservationModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
@@ -45,7 +42,6 @@ const ReservationModal = ({ isOpen, onClose }) => {
           }}
           validationSchema={ReservationSchema}
           onSubmit={(values, { setSubmitting, resetForm }) => {
-            // Handle form submission (would connect to your API in a real app)
             setTimeout(() => {
               alert(JSON.stringify(values, null, 2));
               setSubmitting(false);
@@ -173,7 +169,6 @@ const Home = () => {
 
   return (
     <main className="bg-[#F5F5F5] flex flex-col sm:flex-row justify-between items-center p-8 min-h-screen ">
-      {/* Text Section */}
       <section className="max-w-lg">
         <header>
           <h1 className="font-nunito font-bold text-[2.25rem]">Little Lemon</h1>
@@ -193,10 +188,8 @@ const Home = () => {
         </button>
       </section>
 
-      {/* Image Section */}
       <HeroImage image="/cooking.jpg" />
 
-      {/* Reservation Modal */}
       <ReservationModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

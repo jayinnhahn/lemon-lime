@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import Menu from './Menu'; 
+import Menu from './Menu';
 
 jest.mock('/food1.jpg', () => 'food1-mock.jpg', { virtual: true });
 jest.mock('/food2.jpg', () => 'food2-mock.jpg', { virtual: true });
