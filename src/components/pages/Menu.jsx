@@ -92,20 +92,20 @@ const Menu = () => {
         <h2 className="font-nunito font-bold text-[2.25rem] text-center sm:text-left">Specials</h2>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-[#F5F5F5] text-black border-[#1E1E1E] border-2 font-inter font-medium px-6 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition whitespace-nowrap"
+          className="bg-transparent text-black border-[#1E1E1E] border-2 font-inter font-medium px-6 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition whitespace-nowrap"
         >
           Check Menu
         </button>
       </header>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+      <div className="flex flex-col lg:flex-row justify-between space-between w-full mt-16">
         {menuItems.map((item, index) => (
           <MenuItem key={index} {...item} />
         ))}
       </div>
 
-      <MenuModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+      <MenuModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
       />
     </section>
   );
@@ -113,7 +113,7 @@ const Menu = () => {
 
 // MenuItem component remains the same
 const MenuItem = ({ name, price, image }) => (
-  <article className="flex flex-col gap-4 w-full sm:w-[19.5rem]">
+  <article className="flex flex-col gap-8 md:w-full lg:max-w-[18rem] xl:max-w-[20rem] ">
     <figure className="w-full h-[16rem] border-2 border-[#1E1E1E] rounded-lg shadow-md overflow-hidden">
       <img
         src={image}
@@ -121,7 +121,7 @@ const MenuItem = ({ name, price, image }) => (
         className="w-full h-full object-cover"
       />
     </figure>
-    <div className="flex justify-between bg-white p-2 border-2 border-[#1E1E1E] rounded-md">
+    <div className="flex justify-between bg-white p-2 border-2 border-[#1E1E1E] rounded-md mb-8">
       <p className="font-inter font-medium text-[1rem]">{name}</p>
       <p className="font-inter font-medium text-[1rem]">{price}</p>
     </div>
