@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-// Full menu data (expanded from the specials)
 const fullMenuItems = [
   // Starters
   { category: 'Starters', name: 'Greek Salad', price: 'P 120', description: 'Fresh vegetables, olives, feta cheese with our house dressing' },

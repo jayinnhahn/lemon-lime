@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-4 left-0 right-0 mx-auto w-11/12 max-w-6xl transition-all duration-300 py-2 rounded-lg z-50 bg-[#1E1E1E] ${
+      className={`fixed top-4 left-0 right-0 mx-auto w-11/12 max-w-6xl xl:max-w-12xl transition-all duration-300 py-2 rounded-lg z-50 bg-[#1E1E1E] ${
         isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
       }`}
     >
